@@ -1,1 +1,251 @@
-# guitar-course
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Кантемир Элебесов — Гитара для начинающих</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --dark-green: #2e4f4f;
+      --white: #ffffff;
+      --accent: #c3aed6;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      color: var(--dark-green);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    header {
+      background: linear-gradient(135deg, #dcd3ee, #e3e1f5);
+      padding: 60px 20px 30px;
+      text-align: center;
+      color: var(--dark-green);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.6em;
+    }
+
+    header p {
+      margin-top: 12px;
+      font-size: 1.2em;
+      font-weight: 500;
+    }
+
+    nav {
+      margin-top: 30px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--dark-green);
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    section {
+      padding: 70px 20px;
+      max-width: 980px;
+      margin: auto;
+      animation: fadeInUp 1s ease;
+    }
+
+    #about {
+      background: linear-gradient(to right, #f9f7f3, #f1ece7);
+    }
+
+    #services {
+      background: linear-gradient(to right, #e0f7f4, #d6f0eb);
+    }
+
+    #testimonials {
+      background: linear-gradient(to right, #fdf0f0, #ffe8e8);
+    }
+
+    #contact {
+      background: linear-gradient(to right, #f3f0ff, #e6e2ff);
+    }
+
+    h2 {
+      text-align: center;
+      color: var(--dark-green);
+      margin-bottom: 40px;
+      font-size: 2em;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: var(--white);
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--dark-green);
+      font-size: 1.3em;
+    }
+
+    .telegram-button {
+      display: inline-block;
+      padding: 14px 30px;
+      background-color: #0088cc;
+      color: white;
+      font-weight: 600;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 1em;
+      margin-top: 25px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .telegram-button:hover {
+      background-color: #0074b6;
+      transform: translateY(-3px);
+    }
+
+    footer {
+      background: linear-gradient(135deg, #dcd3ee, #e3e1f5);
+      color: var(--dark-green);
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9em;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Адаптивное меню */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      header h1 {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Кантемир Элебесов — гитара для начинающих</h1>
+    <p>Научу играть с нуля. Без стресса. В своём темпе.</p>
+    <nav>
+      <ul>
+        <li><a href="#about">Обо мне</a></li>
+        <li><a href="#services">Курсы</a></li>
+        <li><a href="#testimonials">Отзывы</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>Обо мне</h2>
+    <p style="text-align: center; max-width: 700px; margin: auto;">
+      Меня зовут Кантемир, я обучаю игре на гитаре с нуля. Если вы никогда не держали инструмент в руках — это нормально!
+      Вместе мы пройдём путь от первых аккордов до уверенного исполнения песен. Главное — ваше желание, всё остальное я помогу освоить.
+    </p>
+  </section>
+
+  <section id="services">
+    <h2>Курсы</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>Гитара с нуля</h3>
+        <p>Научитесь играть простые аккорды, менять их, разбирать ритмы и первые песни. Подходит абсолютно всем.</p>
+      </div>
+      <div class="card">
+        <h3>Песни под гитару</h3>
+        <p>Разучим популярные мелодии, чтобы вы могли играть и петь у костра, дома или для друзей.</p>
+      </div>
+      <div class="card">
+        <h3>Ваша первая композиция</h3>
+        <p>Чувствуете вдохновение? Я помогу вам создать свою первую песню — даже без музыкального опыта.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <h2>Отзывы</h2>
+    <div class="card-container">
+      <div class="card">
+        <p>“Раньше думал, что у меня нет слуха. Но Кантемир объясняет так просто, что я уже играю три песни сам. Спасибо огромное!”</p>
+        <strong>— Николай, 35 лет</strong>
+      </div>
+      <div class="card">
+        <p>“Очень понятные и добрые занятия. Теперь гитара не пугает, а радует!”</p>
+        <strong>— Алина, 27 лет</strong>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Связаться со мной</h2>
+    <div style="text-align: center;">
+      <a href="https://t.me/kantemir_music" target="_blank" class="telegram-button">Написать в Telegram</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Кантемир Элебесов — обучение гитаре. Все права защищены.
+  </footer>
+
+</body>
+</html>
